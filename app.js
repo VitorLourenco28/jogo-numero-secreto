@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = []
-let vezesJogadas = 2
+let numeroSecretoAte = 100
 let numeroSecreto = numeroAleatorio();
 let tentativas = 1
 mensagemInicial();
@@ -10,15 +10,15 @@ function editarTexto (tag, texto) {
 }
 
 function mensagemInicial(){
-    editarTexto('h1', 'Show do MILHÃO');
-    editarTexto('p', 'Escolha um numero de 1 a 10');
+    editarTexto('h1', 'Bem vinda, dona Telma!');
+    editarTexto('p', 'Escolha um numero de 1 a 100');
 }
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
      
     if (chute == numeroSecreto){
-        editarTexto('h1', 'ACERTOU!!!!!!!');
+        editarTexto('h1', 'Acertou mizeravi!');
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
         let mensagemTentativas = `Você descobriu o numero secreto com ${tentativas} ${palavraTentativa} !`;
         editarTexto('p', mensagemTentativas);
@@ -44,9 +44,9 @@ function reiniciarJogo(){
 }
 
 function numeroAleatorio() {
-    let NumeroEscolhido = parseInt(Math.random() * vezesJogadas + 1);
+    let NumeroEscolhido = parseInt(Math.random() * numeroSecretoAte + 1);
     let  quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
-    if (quantidadeDeElementosNaLista == vezesJogadas){
+    if (quantidadeDeElementosNaLista == numeroSecretoAte){
         listaDeNumerosSorteados = [];
     }
 
