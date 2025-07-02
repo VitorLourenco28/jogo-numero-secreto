@@ -1,0 +1,1 @@
+Jogo criaco como teste de um curso, feito em julho de 2025.

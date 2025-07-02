@@ -11,7 +11,7 @@ function editarTexto (tag, texto) {
 
 function mensagemInicial(){
     editarTexto('h1', 'Bem vinda, dona Telma!');
-    editarTexto('p', 'Escolha um numero de 1 a 100');
+    editarTexto('p', `Escolha um numero de 1 a ${numeroSecretoAte}`);
 }
 
 function verificarChute() {
